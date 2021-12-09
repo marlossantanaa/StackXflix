@@ -1,13 +1,12 @@
-//funcóe
-console.log('Hello World');
-let varS= '';
-let varE= 'D';
-let varY= 'U';
-let varZ;
+var intervalo;
 
-varZ=varY ;
-varY=varS ;
-varS=varE ;
-varE=varZ ;
- console.log(varY+varE+varS);
+function scrollDireita(){
+  intervalo = setInterval(function(){ document.getElementById('scroller').scrollLeft += 1 }  , 5);
+};
+function scrollEsquerda(){
+  intervalo = setInterval(function(){ document.getElementById('scroller').scrollLeft -= 1 }  , 5);
+};
+function clearScroll(){
+  clearInterval(intervalo);
+};
 
